@@ -28,7 +28,7 @@ export const validateAuth = (
 
     if (authDetails === null)
         return {
-            authAction: AuthActionEnum.IDLE,
+            authAction: AuthActionEnum.RE_AUTH,
             authDetails: null,
         };
     else if (authDetails === "signout") {

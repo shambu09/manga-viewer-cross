@@ -20,7 +20,7 @@ const Auth = () => {
         const { authAction, authDetails } = validateAuth(window.location.hash);
 
         switch (authAction) {
-            case AuthActionEnum.IDLE:
+            case AuthActionEnum.RE_AUTH:
                 setAuthActionState(AuthActionEnum.RE_AUTH);
                 break;
 
