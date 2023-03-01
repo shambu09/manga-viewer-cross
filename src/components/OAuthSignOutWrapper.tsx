@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { OAUTH_URI_SIGN_OUT } from "../OAuth";
+import { OAUTH_URI_SIGN_OUT } from "../oAuth";
 
 const OAuthSignOutWrapper = () => {
     useEffect(() => {

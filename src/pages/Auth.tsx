@@ -1,4 +1,4 @@
-import { validateAuth } from "../OAuth";
+import { validateAuth } from "../oAuth";
 import { useEffect, useState } from "react";
 import { AuthActionEnum } from "../constants/authActionEnum";
 import { authorize, deauthorize } from "../redux/slices/authSlice";
