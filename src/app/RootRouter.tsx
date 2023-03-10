@@ -1,8 +1,8 @@
 import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import Auth from "./Auth";
-import Error from "./Error";
-import SignOut from "./SignOut";
+import Home from "../common/pages/Home";
+import Auth from "../features/auth/pages/Auth";
+import Error from "../common/pages/Error";
+import SignOut from "../common/pages/SignOut";
 
 const RootRouter = () => {
     return (

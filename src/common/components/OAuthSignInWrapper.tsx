@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { OAUTH_URI_SIGN_IN } from "../oAuth";
+import { OAUTH_URI_SIGN_IN } from "../utils/oAuth";
 
 const OAuthSignInWrapper = () => {
     useEffect(() => {

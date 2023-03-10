@@ -1,6 +1,6 @@
-import { selectIsAuthenticated } from "../redux/slices/authSlice";
+import { selectIsAuthenticated } from "../../features/auth/authSlice";
 import { useAppSelector } from "./reduxHooks";
-import { selectIsUserDetailsFetched } from "../redux/slices/userSlice";
+import { selectIsUserDetailsFetched } from "../../features/user/userSlice";
 import { UserAuthStatusEnum } from "../constants/userAuthStatusEnum";
 
 export function useCheckUserAuthStatus(): UserAuthStatusEnum {

@@ -1,13 +1,13 @@
-import { validateAuth } from "../oAuth";
+import { validateAuth } from "../../../common/utils/oAuth";
 import { useEffect, useState } from "react";
-import { AuthActionEnum } from "../constants/authActionEnum";
-import { authorize, deauthorize } from "../redux/slices/authSlice";
+import { AuthActionEnum } from "../../../common/constants/authActionEnum";
+import { authorize, deauthorize } from "../authSlice";
 import { Redirect } from "react-router-dom";
-import { unload } from "../redux/slices/userSlice";
-import OAuthSignOutWrapper from "../components/OAuthSignOutWrapper";
-import { useCheckUserAuthStatus } from "../hooks/useCheckAuthStatus";
-import { UserAuthStatusEnum } from "../constants/userAuthStatusEnum";
-import { useAppDispatch } from "../hooks/reduxHooks";
+import { unload } from "../../user/userSlice";
+import OAuthSignOutWrapper from "../../../common/components/OAuthSignOutWrapper";
+import { useCheckUserAuthStatus } from "../../../common/hooks/useCheckAuthStatus";
+import { UserAuthStatusEnum } from "../../../common/constants/userAuthStatusEnum";
+import { useAppDispatch } from "../../../common/hooks/reduxHooks";
 
 const Auth = () => {
     const dispatch = useAppDispatch();
