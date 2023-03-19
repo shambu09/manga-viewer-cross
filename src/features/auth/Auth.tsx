@@ -4,7 +4,7 @@ import { AuthActionEnum } from "./authAction.enum";
 import { authorize, deauthorize } from "./auth.slice";
 import { Redirect } from "react-router-dom";
 import { unload } from "../user/user.slice";
-import OAuthSignOutWrapper from "../../common/components/OAuthSignOutWrapper";
+import OAuthSignOutWrapper from "./OAuthSignOutWrapper";
 import { useCheckUserAuthStatus } from "../../common/hooks/useCheckAuthStatus";
 import { UserAuthStatusEnum } from "../../common/constants/userAuthStatus.enum";
 import { useAppDispatch } from "../../common/hooks/reduxHooks";
@@ -50,9 +50,11 @@ const Auth = () => {
                 userUserAuthStatus === UserAuthStatusEnum.UNAUTHORIZED && (
                     <Redirect to="/" />
                 )}
+
             {authActionState === AuthActionEnum.SIGN_OUT && (
                 <OAuthSignOutWrapper />
             )}
+
             {isFailed && <Redirect to="/error" />}
 
             <div>

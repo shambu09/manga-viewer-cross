@@ -2,9 +2,9 @@ import { Route, Switch } from "react-router-dom";
 import Home from "../common/pages/Home";
 import Auth from "../features/auth/Auth";
 import Error from "../common/pages/Error";
-import SignOut from "../common/pages/SignOut";
 import { PrivateRoute } from "../common/components/PrivateRoute";
 import SignUp from "../features/auth/SignUp";
+import SignOut from "../common/pages/SignOut";
 
 const RootRouter = () => {
     return (
