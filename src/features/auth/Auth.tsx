@@ -6,7 +6,7 @@ import { Redirect } from "react-router-dom";
 import { unload } from "../user/user.slice";
 import OAuthSignOutWrapper from "./OAuthSignOutWrapper";
 import { useCheckUserAuthStatus } from "../../common/hooks/useCheckAuthStatus";
-import { UserAuthStatusEnum } from "../../common/constants/userAuthStatus.enum";
+import { UserAuthStatusEnum } from "./userAuthStatus.enum";
 import { useAppDispatch } from "../../common/hooks/reduxHooks";
 
 const Auth = () => {

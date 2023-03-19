@@ -1,6 +1,6 @@
 import { Redirect, Route, RouteProps } from "react-router-dom";
 import { useCheckUserAuthStatus } from "../hooks/useCheckAuthStatus";
-import { UserAuthStatusEnum } from "../constants/userAuthStatus.enum";
+import { UserAuthStatusEnum } from "../../features/auth/userAuthStatus.enum";
 import { ReactNode } from "react";
 
 type Props = {
