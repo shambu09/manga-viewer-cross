@@ -1,11 +1,13 @@
 import queryString from "query-string";
-import { AuthActionEnum } from "../constants/authActionEnum";
+import { AuthActionEnum } from "./authAction.enum";
 
 const redirect_sign_in_uri = import.meta.env.VITE_BASE_SIGN_IN_URL;
 const redirect_sign_out_uri = import.meta.env.VITE_BASE_SIGN_OUT_URL;
 const client_id = import.meta.env.VITE_OAUTH_CLIENT_ID;
 const scope = import.meta.env.VITE_OAUTH_SCOPE;
 
+export const KEY_LOCAL_PATH_BEFORE_OAUTH = "PATH_BEFORE_OAUTH";
+export const DEFAULT_VALUE_LOCAL_PATH_BEFORE_OAUTH = "/";
 export const OAUTH_URI_SIGN_IN = `https://login.live.com/oauth20_authorize.srf?client_id=${client_id}&scope=${scope}&response_type=token&redirect_uri=${redirect_sign_in_uri}`;
 export const OAUTH_URI_SIGN_OUT = `https://login.live.com/oauth20_logout.srf?client_id=${client_id}&redirect_uri=${redirect_sign_out_uri}`;
 

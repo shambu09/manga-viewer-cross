@@ -1,24 +1,21 @@
 import { Route, Switch } from "react-router-dom";
 import Home from "../common/pages/Home";
-import Auth from "../features/auth/pages/Auth";
+import Auth from "../features/auth/Auth";
 import Error from "../common/pages/Error";
 import SignOut from "../common/pages/SignOut";
+import { PrivateRoute } from "../common/components/PrivateRoute";
+import SignUp from "../features/auth/SignUp";
 
 const RootRouter = () => {
     return (
         <Switch>
-            <Route exact path="/">
+            <Route path="/signout" component={SignOut} />
+            <Route path="/signup" component={SignUp} />
+            <PrivateRoute exact path="/">
                 <Home />
-            </Route>
-            <Route exact path="/auth">
-                <Auth />
-            </Route>
-            <Route exact path="/signout">
-                <SignOut />
-            </Route>
-            <Route>
-                <Error />
-            </Route>
+            </PrivateRoute>
+            <Route exact path="/auth" component={Auth} />
+            <Route component={Error} />
         </Switch>
     );
 };

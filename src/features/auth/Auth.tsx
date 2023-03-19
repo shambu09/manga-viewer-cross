@@ -1,13 +1,13 @@
-import { validateAuth } from "../../../common/utils/oAuth";
+import { validateAuth } from "./oAuth.utils";
 import { useEffect, useState } from "react";
-import { AuthActionEnum } from "../../../common/constants/authActionEnum";
-import { authorize, deauthorize } from "../authSlice";
+import { AuthActionEnum } from "./authAction.enum";
+import { authorize, deauthorize } from "./auth.slice";
 import { Redirect } from "react-router-dom";
-import { unload } from "../../user/userSlice";
-import OAuthSignOutWrapper from "../../../common/components/OAuthSignOutWrapper";
-import { useCheckUserAuthStatus } from "../../../common/hooks/useCheckAuthStatus";
-import { UserAuthStatusEnum } from "../../../common/constants/userAuthStatusEnum";
-import { useAppDispatch } from "../../../common/hooks/reduxHooks";
+import { unload } from "../user/user.slice";
+import OAuthSignOutWrapper from "../../common/components/OAuthSignOutWrapper";
+import { useCheckUserAuthStatus } from "../../common/hooks/useCheckAuthStatus";
+import { UserAuthStatusEnum } from "../../common/constants/userAuthStatus.enum";
+import { useAppDispatch } from "../../common/hooks/reduxHooks";
 
 const Auth = () => {
     const dispatch = useAppDispatch();
@@ -48,7 +48,7 @@ const Auth = () => {
         <>
             {authActionState === AuthActionEnum.RE_AUTH &&
                 userUserAuthStatus === UserAuthStatusEnum.UNAUTHORIZED && (
-                    <Redirect to="/home" />
+                    <Redirect to="/" />
                 )}
             {authActionState === AuthActionEnum.SIGN_OUT && (
                 <OAuthSignOutWrapper />
